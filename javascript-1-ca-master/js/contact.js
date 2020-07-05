@@ -2,12 +2,12 @@
 
 var submitBtn = document.getElementById('submitMessage');
 var firstNameError = document.getElementById('firstNameError');
-var AdressError = document.getElementById('AdressError');
+var adressError = document.getElementById('adressError');
 var emailError = document.getElementById('emailError');
 var messageError = document.getElementById('messageError');
 
 firstNameError.style.display = "none";
-AdressError.style.display = "none";
+adressError.style.display = "none";
 emailError.style.display = "none";
 messageError.style.display = "none";
 
@@ -15,7 +15,7 @@ messageError.style.display = "none";
   submitBtn.addEventListener('click', function(e){
     e.preventDefault();
     var inputName = document.getElementById("firstName").value;
-    var inputAdress = document.getElementById("Adress").value;
+    var inputAdress = document.getElementById("adress").value;
     var inputEmail = document.getElementById("email").value;
     var inputMessage = document.getElementById("message").value;
 
@@ -32,11 +32,11 @@ messageError.style.display = "none";
 
     // 
     function checkAdress(Adress) {
-      var AdressRequired = /[a-zA-Z.-]{10,}$/g;
-      if (Adress.match(AdressRequired)) {
-        AdressError.style.display = "none";
+      var adressRequired = /[a-zA-Z.-]{10,}$/g;
+      if (adress.match(adressRequired)) {
+        adressError.style.display = "none";
       } else {
-        AdressError.style.display = "block";
+        adressError.style.display = "block";
         return false;
       }
     }
@@ -70,7 +70,7 @@ messageError.style.display = "none";
     checkMessage(inputMessage);
 
     function redirect(){
-      if (messageError.style.display === "none" && emailError.style.display === "none" && AdressError.style.display === "none" && firstNameError.style.display === "none");
+      if (messageError.style.display === "none" && emailError.style.display === "none" && adressError.style.display === "none" && firstNameError.style.display === "none");
     }
 
     redirect();
